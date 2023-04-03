@@ -1,0 +1,130 @@
+body {
+  background: #201c1c;
+  color: #f26e6e;
+  font-family: "Montserrat", sans-serif; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  * body {
+    background: #222222;
+    color: #f26e6e;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.5em;
+    margin: 0;
+    padding: 0;
+    height: 100vh; }
+
+.home {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif; }
+  .home img {
+    border-radius: 15px; }
+  .home .informacion {
+    font-size: 30px; }
+
+.container .informacion {
+  background: #201c1c;
+  animation-name: desplazarse;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: reverse 1seg;
+  border-radius: 10px; }
+
+.container .a {
+  text-align: center; }
+
+@keyframes desplazarse {
+  from {
+    transform: translateX(-300px); }
+  to {
+    transform: translateX(0); } }
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+  background: #201c1c;
+  border-radius: 15px;
+  transition: all 300ms ease;
+  margin: auto; }
+  .card:hover {
+    box-shadow: 5px 5px 20px #f26e6e; }
+  .card-title {
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 0 20px 0 #f26e6e;
+    border-radius: 5px;
+    color: #ffffff; }
+  .card-text {
+    text-align: left; }
+
+.nosotros {
+  max-width: 1585px; }
+
+.img-fluid {
+  clip-path: center(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  animation-name: desplazarse;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: reverse 2seg;
+  border-radius: 20px; }
+
+@keyframes desplazarse {
+  from {
+    transform: translateX(-300px); }
+  to {
+    transform: translateX(0); } }
+
+.form-contacto {
+  width: 480px;
+  margin: auto;
+  background: #201c1c;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-family: "Montserrat", sans-serif; }
+  .form-contacto h2 {
+    color: #f5efef;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 30px; }
+  .form-contacto input, .form-contacto textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none; }
+  .form-contacto textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%; }
+  .form-contacto .boton {
+    background: #f26e6e;
+    color: #f5efef;
+    padding: 30px;
+    border: 1px solid #f5efef;
+    border-radius: 10px; }
+  @media (max-width: 300px) {
+    .form-contacto form {
+      width: 100%; } }
+
+#collapseOne {
+  color: #201c1c; }
+
+#collapseTwo {
+  color: #201c1c; }
+
+#collapseThree {
+  color: #201c1c; }
+
+#collapsefour {
+  color: #201c1c; }
+
+.contacto-info {
+  background: #201c1c; }

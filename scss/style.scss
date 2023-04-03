@@ -1,0 +1,186 @@
+//globals
+@import './utilities/variables';
+@import './base/reset';
+@import "./utilities/mixins";
+// views
+@import './views/contacto';
+@import './views/nosotros';
+@import './views/planes';
+@import './views/preguntasfrecuentes';
+// resets
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    body{
+        background: #222222;
+        color: $primary;
+        font-family:$font-principal; 
+        padding: 1.5em;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+}
+// inicio
+.home{
+    font-size: $font-sizeprincipal;
+    font-family: $font-principal;
+
+    img{
+        border-radius: 15px;
+    }
+
+    .informacion{
+        font-size: 30px;
+    }
+
+}
+
+.container {
+    .informacion{ background: $secondary;
+        animation-name:desplazarse ;
+        animation-duration:2s ;
+        animation-iteration-count:1;
+        animation-direction:reverse 1seg;
+        border-radius: 10px;
+    } 
+    .a{text-align: center;
+    }
+}
+
+@keyframes desplazarse{
+    from{
+     transform: translateX(-300px);
+    }
+ 
+    to{
+     transform: translateX(0);
+ 
+    }
+ }
+ // planes
+.card{
+    position: relative;
+    width: $ancho-card ;
+    height: $ancho-card ;
+    margin-bottom: 20px;
+    background: $secondary;
+    border-radius: 15px;
+    transition: all 300ms ease;
+    margin: auto;
+
+    &:hover{
+         box-shadow: 5px 5px 20px  $primary;
+    }
+
+    &-title{
+        font-size: $fontsize-title;
+        text-align: center;
+        box-shadow: 0 0 20px 0 $primary;
+        border-radius: 5px;
+        color: $title-card;   
+    }
+
+    &-text{
+        text-align: left;
+    }
+}
+// nosotros
+.nosotros{
+    max-width: 1585px;
+}
+
+
+.img-fluid{
+    clip-path: center(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    animation-name:desplazarse ;
+    animation-duration:2s ;
+    animation-iteration-count:1;
+    animation-direction:reverse 2seg;
+    border-radius: 20px;
+}
+
+@keyframes desplazarse{
+    from{
+        transform: translateX(-300px);
+       }
+    
+       to{
+        transform: translateX(0);
+    
+       }
+}
+// contacto
+.form-contacto{
+    width: $ancho-form;
+    margin: auto;
+    background: $secondary;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    font-family:$font-principal ;
+    
+    & h2{
+        color: $alternative;
+        text-align: center;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    & input, textarea{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 17px;
+        border: none;
+    }
+
+    & textarea{
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%;
+    }
+
+    & .boton{
+        background:$primary-color ;
+        color: $alternative;
+        padding: 30px;
+        border: 1px solid $accent-color;
+        border-radius: 10px;
+    }
+    
+    @media(max-width:300px){
+        form{
+            width: 100%;
+        }
+    }
+}
+// Preguntas frecuentes
+#collapseOne{
+    @include acordion;
+}
+
+#collapseTwo{
+    @include acordion;
+}
+#collapseThree{
+    @include acordion;
+}
+#collapsefour{
+    @include acordion;
+
+}
+.contacto-info{
+    background: $colorfooter;
+}
+
+
+
+
+
+
